@@ -1,9 +1,9 @@
-# Dell-Latitude-7410-Hackintosh-OC
+# Dell-Latitude-7410-macOS-Sequoia-Hackintosh-Opencore
 OpenCore based EFI for Dell Latitude 7410
 
-![Dell-Latitude-7410-Hackintosh](https://github.com/user-attachments/assets/e016d9fa-944b-46a4-8040-290f9689befb)
+![Dell-Latitude-7410-Hackintosh](https://github.com/user-attachments/assets/fde4e919-8011-48dd-b407-30ee93ee5f16)
 
-I am currently using macOS Ventura 13.7.1 and I wouldn't recommend updating to Sonoma because of the issues with the iServices due to Wifi kext so wait until it's fixed. 
+I am currently using macOS Sequoia 15.7.2 and personally I wouldn't recommend updating to Tahoe because of the Liquid Glass issues and bugs.
 
 ## System Configuration
 
@@ -29,7 +29,8 @@ OpenCore 1.0.0
 MacBookPro16,2
 
 ### SecureBootModel 
-j215
+**macOS Ventura**: j215 or j223
+**macOS Sequoia**: Disabled (due to wifi patching using OCLP)
 
 ## BIOS Settings
 
@@ -53,7 +54,7 @@ j215
  
  - [x] Internal Microphone
  
- - [x] Audio Jack - Working with ComboJack - [https://github.com/macos86/ComboJack](https://github.com/macos86/ComboJack)
+ - [x] Headphone Jack - Working with ComboJack - [https://github.com/macos86/ComboJack](https://github.com/macos86/ComboJack) (not tested on macOS Sequoia)
  
  - [x] WiFi (2.4Ghz + 5Ghz)
  
@@ -90,6 +91,22 @@ j215
 
 - HDMI
 - Thunderbolt
+
+## Wifi Patching for macOS sequoia
+- Install macOS sequoia using the EFI folder provided here
+- After successful installation, install and open OCLP (OpenCore Legacy Patcher): 
+  https://github.com/dortania/OpenCore-Legacy-Patcher/releases/tag/2.4.1
+  ![Dell-Latitude-7410-Hackintosh](https://github.com/user-attachments/assets/ab940a87-79ae-49bd-b5ef-145104bb85f2)
+  Click on Start Root Patching and after it is done, Reboot!
+  ![Dell-Latitude-7410-Hackintosh](https://github.com/user-attachments/assets/35ef6434-7854-426f-a2d9-b09d6d4f93f7) 
+- Now after rebooting the last step is to open your config.plist in your .plist editor of choice and find the DeviceProperties tab. Under Add tab, add a hashtag # in front of the name of your network card's Device Path where the model is **BCM4360 802.11ac Wireless Network Adapter**:
+  ![Dell-Latitude-7410-Hackintosh](https://github.com/user-attachments/assets/d33969bc-3b1b-483d-8508-68e5ca1d169c)
+  And remove the hastag # in front of the name of your network card's Device Path where the model is **Comet Lake PCH-LP CNVi WiFi**:
+  ![Dell-Latitude-7410-Hackintosh](https://github.com/user-attachments/assets/506477ae-bf93-49fe-a020-113f7bc5b90b)
+- Reboot again and your WiFi and Bluetooth will start working.
+- If the above steps do not work then follow this guide: https://github.com/randomappleboi/Native-Wifi-for-Hackintoshes-with-Intel-Wireless-cards-on-macOS-sequoia
+  
+
 
 ## Additional Notes
 
