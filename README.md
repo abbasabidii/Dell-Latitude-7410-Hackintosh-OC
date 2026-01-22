@@ -50,9 +50,9 @@ MacBookPro16,2
  
  - [x] Sleep/Wake
  
- - [x] Internal Speakers
+ - [x] Internal Speakers (ALC Layout ID: 33)
  
- - [x] Internal Microphone
+ - [x] Internal Microphone 
  
  - [x] Headphone Jack - Working with ComboJack - [https://github.com/macos86/ComboJack](https://github.com/macos86/ComboJack) (not tested on macOS Sequoia)
  
