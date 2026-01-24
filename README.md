@@ -103,7 +103,7 @@ MacBookPro16,2
   ![Dell-Latitude-7410-Hackintosh](https://github.com/user-attachments/assets/d33969bc-3b1b-483d-8508-68e5ca1d169c)
   And remove the hastag # in front of the name of your network card's Device Path where the model is **Comet Lake PCH-LP CNVi WiFi**:
   ![Dell-Latitude-7410-Hackintosh](https://github.com/user-attachments/assets/506477ae-bf93-49fe-a020-113f7bc5b90b)
-- Reboot again and your WiFi and Bluetooth will start working.
+- Reboot and reset the NVRAM and your WiFi and Bluetooth will start working.
 - If the above steps do not work then follow this guide: https://github.com/randomappleboi/Native-Wifi-for-Hackintoshes-with-Intel-Wireless-cards-on-macOS-sequoia
   
 
