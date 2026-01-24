@@ -105,6 +105,8 @@ MacBookPro16,2
   ![Dell-Latitude-7410-Hackintosh](https://github.com/user-attachments/assets/506477ae-bf93-49fe-a020-113f7bc5b90b)
 - Reboot and reset the NVRAM and your WiFi and Bluetooth will start working.
 - If the above steps do not work then follow this guide: https://github.com/randomappleboi/Native-Wifi-for-Hackintoshes-with-Intel-Wireless-cards-on-macOS-sequoia
+- When applying supplemental updates, make sure to disable AirPortitlwm to block from loading or the system will throw a kernel panic when the update is processed and finishes booting. You can enable it later once you're logged in and also apply the OCLP rootpatch after the update.
+- On some WiFi networks you might not be able to upload anything greater than 1MB to google drive or google photos using Safari browser, so use google chrome.
 
 ## Additional Notes
 
