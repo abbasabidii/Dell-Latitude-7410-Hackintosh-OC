@@ -54,7 +54,7 @@ MacBookPro16,2
  
  - [x] Internal Microphone 
  
- - [x] Headphone Jack - Working with ComboJack - [https://github.com/macos86/ComboJack](https://github.com/macos86/ComboJack) (not tested on macOS Sequoia)
+ - [x] Headphone Jack - Working with ComboJack - [https://github.com/macos86/ComboJack](https://github.com/macos86/ComboJack)
  
  - [x] WiFi (2.4Ghz + 5Ghz)
  
