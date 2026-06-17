@@ -60,7 +60,7 @@ MacBookPro16,2
  
  - [x] Bluetooth
 
- - [x] HDMI + audio over HDMI (I didn't test it)
+ - [x] HDMI + audio over HDMI (Tested)
 
  - [x] Touchpad with Gestures + Buttons
 
