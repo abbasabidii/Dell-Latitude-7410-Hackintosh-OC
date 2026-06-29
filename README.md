@@ -1,4 +1,4 @@
-# Dell-Latitude-7410-macOS-Ventura-Sonoma-Sequoia-Tahoe-Hackintosh-Opencore
+# Dell-Latitude-7410-macOS-Tahoe-Hackintosh-Opencore
 OpenCore based EFI for Dell Latitude 7410
 
 ![Dell-Latitude-7410-Hackintosh](https://github.com/user-attachments/assets/f2bdfcf8-6f0d-4472-a87c-5fa55fbf5b07)
