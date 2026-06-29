@@ -33,7 +33,7 @@ MacBookPro16,2
 
 ### SecureBootModel 
 **macOS Ventura**: j215 or j223 <br>
-**macOS Sequoia**: Disabled (due to issues booting the installer and wifi patching using OCLP)
+**macOS Sequoia**: Disabled (due to issues booting the installer and wifi patching using OCLP) <br>
 **macOS Tahoe**: Disabled (due to issues booting the installer, audio and wifi patching using OCLP)
 
 
