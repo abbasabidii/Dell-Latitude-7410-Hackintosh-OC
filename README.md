@@ -1,9 +1,9 @@
-# Dell-Latitude-7410-macOS-Sequoia-Hackintosh-Opencore
+# Dell-Latitude-7410-macOS-Ventura-Sonoma-Sequoia-Hackintosh-Opencore
 OpenCore based EFI for Dell Latitude 7410
 
 ![Dell-Latitude-7410-Hackintosh](https://github.com/user-attachments/assets/fde4e919-8011-48dd-b407-30ee93ee5f16)
 
-I am currently using macOS Sequoia 15.7.2 and personally I wouldn't recommend updating to Tahoe because of the Liquid Glass issues and bugs.
+This EFI is compatible with macOS Ventura, Sonoma and Sequoia.
 
 ## System Configuration
 
@@ -22,7 +22,7 @@ I am currently using macOS Sequoia 15.7.2 and personally I wouldn't recommend up
 
 ### Bootloader
 
-OpenCore 1.0.0
+OpenCore 1.0.7
 
 ### SMBIOS
 
@@ -89,7 +89,6 @@ MacBookPro16,2
 
 ## What's not tested yet
 
-- HDMI
 - Thunderbolt
 
 ## Wifi Patching for macOS sequoia
@@ -106,7 +105,7 @@ MacBookPro16,2
 - Reboot and reset the NVRAM and your WiFi and Bluetooth will start working.
 - If the above steps do not work then follow this guide: https://github.com/randomappleboi/Native-Wifi-for-Hackintoshes-with-Intel-Wireless-cards-on-macOS-sequoia
 - When applying supplemental updates, make sure to disable AirPortitlwm to block from loading or the system will throw a kernel panic when the update is processed and finishes booting. You can enable it later once you're logged in and also apply the OCLP rootpatch after the update.
-- On some WiFi networks you might not be able to upload anything greater than 1MB to google drive or google photos using Safari browser, so use google chrome.
+- On some WiFi networks you might not be able to upload anything greater than 1MB to google drive or google photos, to solve this make sure Wifi is at the top in service order in network settings in system preferences.
 
 ## Additional Notes
 
