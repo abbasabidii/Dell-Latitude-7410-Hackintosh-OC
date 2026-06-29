@@ -1,9 +1,10 @@
-# Dell-Latitude-7410-macOS-Ventura-Sonoma-Sequoia-Hackintosh-Opencore
+# Dell-Latitude-7410-macOS-Ventura-Sonoma-Sequoia-Tahoe-Hackintosh-Opencore
 OpenCore based EFI for Dell Latitude 7410
 
-![Dell-Latitude-7410-Hackintosh](https://github.com/user-attachments/assets/fde4e919-8011-48dd-b407-30ee93ee5f16)
+![Dell-Latitude-7410-Hackintosh](https://github.com/user-attachments/assets/f2bdfcf8-6f0d-4472-a87c-5fa55fbf5b07)
 
-This EFI is compatible with macOS Ventura, Sonoma and Sequoia.
+
+This EFI is compatible with macOS Ventura, Sonoma, Sequoia and Tahoe, check releases for more details.
 
 ## System Configuration
 
@@ -14,6 +15,7 @@ This EFI is compatible with macOS Ventura, Sonoma and Sequoia.
 - WiFi: Intel® Wi-Fi 6 AX201
 - Display: 14" 1920*1080 FullHD IPS
 - Sound Card: Realtek ALC295
+  
 
 ### BIOS Version
 
@@ -24,6 +26,7 @@ This EFI is compatible with macOS Ventura, Sonoma and Sequoia.
 
 OpenCore 1.0.7
 
+
 ### SMBIOS
 
 MacBookPro16,2
@@ -31,17 +34,19 @@ MacBookPro16,2
 ### SecureBootModel 
 **macOS Ventura**: j215 or j223 <br>
 **macOS Sequoia**: Disabled (due to issues booting the installer and wifi patching using OCLP)
+**macOS Tahoe**: Disabled (due to issues booting the installer, audio and wifi patching using OCLP)
+
 
 ## BIOS Settings
 
 - Boot mode: UEFI
 - Fast Boot: Thorough
 - SecureBoot: Disable
-- SATA Mode: AHCI 
+- SATA Mode: AHCI
+  
 
 ## What's working
 
- 
  - [x] CPU Speedstep
 
  - [x] iGPU acceleration
@@ -58,7 +63,7 @@ MacBookPro16,2
  
  - [x] WiFi (2.4Ghz + 5Ghz)
  
- - [x] Bluetooth
+ - [x] Bluetooth (LE and Audio over AirPods)
 
  - [x] HDMI + audio over HDMI (Tested)
 
@@ -80,7 +85,9 @@ MacBookPro16,2
  
  - [x] Thunderbolt (needs to plug a device before boot)
     
- - [x] iServices (iMessage & FaceTime)
+ - [x] AirPlay and Handoff
+       
+ - [x] iServices (iMessage, FaceTime and Phone)
  
 
 ## What's not working
@@ -91,20 +98,17 @@ MacBookPro16,2
 
 - Thunderbolt
 
-## Wifi Patching for macOS sequoia
-- Install macOS sequoia using the EFI folder provided here
-- After successful installation, install and open OCLP (OpenCore Legacy Patcher): 
-  https://github.com/dortania/OpenCore-Legacy-Patcher/releases/tag/2.4.1
-  ![Dell-Latitude-7410-Hackintosh](https://github.com/user-attachments/assets/ab940a87-79ae-49bd-b5ef-145104bb85f2)
-  Click on Start Root Patching and after it is done, Reboot!
-  ![Dell-Latitude-7410-Hackintosh](https://github.com/user-attachments/assets/35ef6434-7854-426f-a2d9-b09d6d4f93f7) 
-- Now after rebooting the last step is to open your config.plist in your .plist editor of choice and find the DeviceProperties tab. Under Add tab, add a hashtag # in front of the name of your network card's Device Path where the model is **BCM4360 802.11ac Wireless Network Adapter**:
-  ![Dell-Latitude-7410-Hackintosh](https://github.com/user-attachments/assets/d33969bc-3b1b-483d-8508-68e5ca1d169c)
-  And remove the hastag # in front of the name of your network card's Device Path where the model is **Comet Lake PCH-LP CNVi WiFi**:
-  ![Dell-Latitude-7410-Hackintosh](https://github.com/user-attachments/assets/506477ae-bf93-49fe-a020-113f7bc5b90b)
-- Reboot and reset the NVRAM and your WiFi and Bluetooth will start working.
-- If the above steps do not work then follow this guide: https://github.com/randomappleboi/Native-Wifi-for-Hackintoshes-with-Intel-Wireless-cards-on-macOS-sequoia
-- When applying supplemental updates, make sure to disable AirPortitlwm to block from loading or the system will throw a kernel panic when the update is processed and finishes booting. You can enable it later once you're logged in and also apply the OCLP rootpatch after the update.
+## Audio and Wifi Patching for macOS Tahoe
+- Install macOS Tahoe using the EFI folder provided here
+- After successful installation
+- Disable FileVault
+- Disable Automatic Updates completely (Do NOT select **Automatic Download Only** option)
+- Install and open OCLP Mod (the app will be in chinese, use google translate): 
+  https://github.com/laobamac/OCLP-Mod
+- Click on Start Root Patching and after it is done, Reboot!
+- Reset the NVRAM and your Audio and WiFi will start working.
+- If the above steps do not work then follow this guide: https://www.insanelymac.com/forum/topic/362042-experimental-fork-of-oclp-300-nightly-–-modern-wi-fi-awdl-and-applehda-fully-working-under-tahoe/
+- When applying supplemental updates, make sure to uninstall root patches and disable AirPortitlwm to block from loading or the system will throw a kernel panic when the update is processed and finishes booting. You can enable it later once you're logged in and also apply the OCLP rootpatch after the update.
 - On some WiFi networks you might not be able to upload anything greater than 1MB to google drive or google photos, to solve this make sure Wifi is at the top in service order in network settings in system preferences.
 
 ## Additional Notes
