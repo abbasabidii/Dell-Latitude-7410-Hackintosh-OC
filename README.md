@@ -4,7 +4,7 @@ OpenCore based EFI for Dell Latitude 7410
 ![Dell-Latitude-7410-Hackintosh](https://github.com/user-attachments/assets/f2bdfcf8-6f0d-4472-a87c-5fa55fbf5b07)
 
 
-This EFI is compatible with macOS Ventura, Sonoma, Sequoia and Tahoe, check releases for more details.
+I am using **macOS Tahoe 26.5.1** with this EFI and it is compatible with macOS Ventura, Sonoma and Sequoia too, check releases for more details.
 
 ## System Configuration
 
