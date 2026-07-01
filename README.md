@@ -85,7 +85,7 @@ MacBookPro16,2
  
  - [x] Thunderbolt (needs to plug a device before boot)
     
- - [x] AirPlay and Handoff
+ - [x] AirPlay, Screen Mirroring (not iPhone mirroring) and Handoff
        
  - [x] iServices (iMessage, FaceTime and Phone)
  
