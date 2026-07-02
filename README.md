@@ -99,6 +99,7 @@ MacBookPro16,2
 - Thunderbolt
 
 ## Audio and Wifi Patching for macOS Tahoe
+
 - Install macOS Tahoe using the EFI folder provided here
 - After successful installation
 - Disable FileVault
@@ -108,8 +109,12 @@ MacBookPro16,2
 - Click on Start Root Patching and after it is done, Reboot!
 - Reset the NVRAM and your Audio and WiFi will start working.
 - If the above steps do not work then follow this guide: https://www.insanelymac.com/forum/topic/362042-experimental-fork-of-oclp-300-nightly-–-modern-wi-fi-awdl-and-applehda-fully-working-under-tahoe/
-- When applying supplemental updates, make sure to uninstall root patches and disable AirPortitlwm to block from loading or the system will throw a kernel panic when the update is processed and finishes booting. You can enable it later once you're logged in and also apply the OCLP rootpatch after the update.
-- On some WiFi networks you might not be able to upload anything greater than 1MB to google drive or google photos, to solve this make sure Wifi is at the top in service order in network settings in system preferences.
+- When applying supplemental updates, make sure to uninstall root patches and re-apply them after the update.
+
+## Issues
+
+- Currently there is a bug in macOS Tahoe where opening the Apps menu aka the new launchpad causes very high GPU usage spiking windowserver's gpu usage to more than 90% and the same bug is happening with Adobe apps like Photoshop and Illustrator, using these apps in fullscreen makes them smoother and helps avoid the high gpu usage.
+- On some WiFi networks you might not be able to upload anything greater than 1MB to google drive or google photos, to solve this make sure Wifi is at the top in service order in network settings in system preferences, if it still does not work try using google chrome.
 
 ## Additional Notes
 
