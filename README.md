@@ -113,7 +113,7 @@ MacBookPro16,2
 
 ## Issues
 
-- Currently there is a bug in macOS Tahoe where opening the Apps menu aka the new launchpad causes very high GPU usage spiking windowserver's gpu usage to more than 90% and the same bug is happening with Adobe apps like Photoshop and Illustrator, using these apps in fullscreen makes them smoother and helps avoid the high gpu usage.
+- Currently there is a bug in macOS Tahoe where opening the Apps menu aka the new launchpad causes very high GPU usage spiking windowserver's gpu usage to more than 90% and the same issue is there with Adobe apps like Photoshop and Illustrator, but using these apps in fullscreen makes them smoother and helps avoid the high gpu usage.
 - On some WiFi networks you might not be able to upload anything greater than 1MB to google drive or google photos, to solve this make sure Wifi is at the top in service order in network settings in system preferences, if it still does not work try using google chrome.
 
 ## Additional Notes
