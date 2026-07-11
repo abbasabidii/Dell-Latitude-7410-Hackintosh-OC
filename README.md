@@ -121,7 +121,8 @@ MacBookPro16,2
 Use one-key-hidpi to fix display scaling [https://github.com/xzhih/one-key-hidpi](https://github.com/xzhih/one-key-hidpi) <br>
 Don't forget to map your USB ports [https://github.com/corpnewt/USBMap](https://github.com/corpnewt/USBMap) <br>
 Don't forget to generate your own SMBIOS before installing macOS [https://github.com/corpnewt/GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) <br>
-[Workaround To fix Apple Music skipping tracks when using bluetooth audio.](https://www.reddit.com/r/hackintosh/comments/uip41i/workaround_apple_music_skipping_tracks_when_using/)
+[Workaround To fix Apple Music skipping tracks when using bluetooth audio.](https://www.reddit.com/r/hackintosh/comments/uip41i/workaround_apple_music_skipping_tracks_when_using/) <br>
+Remove any redundant Device Property from `Device Properties` that your Laptop does not have
 
 ## Disclaimer
 All credit goes to the Apple for macOS and the devs who developed the Clover and OpenCore bootloader, Kexts and tools for hackintoshing, I only gathered information on the internet and and I wrote this tutorial after a lot of experimenting, trial and error with it since 2018 and my first hack was made possible in 2019 . This is for educational purposes only and should be considered as such.
