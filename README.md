@@ -12,7 +12,7 @@ I am using **macOS Tahoe 26.5.2** with this EFI and it is compatible with macOS 
 - iGPU: Intel UHD Graphics 620 (Comet Lake)
 - RAM:  16GB DDR4 2667Mhz
 - SSD:  512 GB KIOXIA KBG40ZNS512G NVMe 
-- WiFi: Intel® Wi-Fi 6 AX201
+- WiFi: Intel® Wi-Fi 6 AX201 CNVi
 - Display: 14" 1920*1080 FullHD IPS
 - Sound Card: Realtek ALC295
   
@@ -29,7 +29,7 @@ OpenCore 1.0.7
 
 ### SMBIOS
 
-MacBookPro16,2
+MacBookPro16,3
 
 ### SecureBootModel 
 **macOS Ventura**: j215 or j223 <br>
@@ -104,16 +104,17 @@ MacBookPro16,2
 - After successful installation
 - Disable FileVault
 - Disable Automatic Updates completely (Do NOT select **Automatic Download Only** option)
-- Install and open OCLP Mod (the app will be in chinese, use google translate): 
-  https://github.com/laobamac/OCLP-Mod
-- Click on Start Root Patching and after it is done, Reboot!
-- Reset the NVRAM and your Audio and WiFi will start working.
-- If the above steps do not work then follow this guide: https://www.insanelymac.com/forum/topic/362042-experimental-fork-of-oclp-300-nightly-–-modern-wi-fi-awdl-and-applehda-fully-working-under-tahoe/
+- Install and open [OCLP 3.0.0 Nightly - amfipassbeta Edition (Tahoe)](https://github.com/kgp-macPro/OCLP-lzhoang2801-amfipassbeta) 
+- Click on Start Root Patching and after it is done, reboot and your Audio will start working
+- For WiFi, open the Config.plist in any plist editor and go to `Devices Properties` > `Add` and add `#` infront of the `PciRoot(0x0)/Pci(0x14,0x3)` where `model` is `BCM4360 802.11ac Wireless Network Adapter`
+- Next, remove the `#` from the `PciRoot(0x0)/Pci(0x14,0x3)` where the `Model` is `Comet Lake PCH-LP CNVi WiFi`
+- Reboot and reset the NVRAM and now your WiFi will start working.
+- If the above steps do not work then follow this [guide](https://www.insanelymac.com/forum/topic/362042-experimental-fork-of-oclp-300-nightly-–-modern-wi-fi-awdl-and-applehda-fully-working-under-tahoe/).
 - When applying supplemental updates, make sure to uninstall root patches and re-apply them after the update.
 
 ## Issues
 
-- Currently there is a bug in macOS Tahoe where opening the Apps menu aka the new launchpad causes very high GPU usage spiking windowserver's gpu usage to more than 90% and the same issue is there with Adobe apps like Photoshop and Illustrator, but using these apps in fullscreen makes them smoother and helps avoid the high gpu usage.
+- Currently there is a bug in macOS Tahoe where opening the Apps menu aka the new launchpad causes very high GPU usage spiking windowserver's gpu usage to more than 90% and the same issue is there with Adobe apps like Photoshop and Illustrator, if you face this then using these apps in fullscreen makes them smoother and helps avoid the high gpu usage.
 - On some WiFi networks you might not be able to upload anything greater than 1MB to google drive or google photos, to solve this make sure Wifi is at the top in service order in network settings in system preferences, if it still does not work try using google chrome.
 
 ## Additional Notes
