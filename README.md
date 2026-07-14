@@ -5,6 +5,8 @@ OpenCore based EFI for Dell Latitude 7410
 
 
 I am using **macOS Tahoe 26.5.2** with this EFI and it is compatible with macOS Ventura, Sonoma and Sequoia too, check releases for more details.
+If you face any issues with iMessage and FaceTime, install macOS Ventura 13.7.8, sign in with your apple id and set it up and then create installer for macOS tahoe using Tahoe EFI and upgrade it over Ventura. (I did this myself)
+
 
 ## System Configuration
 
