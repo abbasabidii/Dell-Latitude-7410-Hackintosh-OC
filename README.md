@@ -114,6 +114,16 @@ MacBookPro16,3
 - If the above steps do not work then follow this [guide](https://www.insanelymac.com/forum/topic/362042-experimental-fork-of-oclp-300-nightly-–-modern-wi-fi-awdl-and-applehda-fully-working-under-tahoe/).
 - When applying supplemental updates, make sure to uninstall root patches and re-apply them after the update.
 
+## HiDPI Resolution (1600x900 working!)
+- To get the HiDPI resolutions use [one-key-hidpi](https://github.com/xzhih/one-key-hidpi)
+- Select "Manual input resolution" option
+- You must enter the resolution that you want and it's 2x for example I have 1920x1080 display so I will take all the 4 resolutions supported by my display and add a 2x version of them as well and pass it in one-key-hidpi.
+- So in my case I used the following for my 1920x1080 display `3840x2160 1920x1080 3200x1800 1600x900 2732x1536 1366x768 2560x1440 1280x720`
+- Reboot and you will have HiDPI at 1600x900 resolution <br>
+  <img width="1600" height="900" alt="Screenshot 2026-07-15 at 8 07 53 PM" src="https://github.com/user-attachments/assets/3a151301-2622-446d-a2d1-8c85f80b4c99" />
+
+
+
 ## Issues
 
 - Currently there is a bug in macOS Tahoe where opening the Apps menu aka the new launchpad causes very high GPU usage spiking windowserver's gpu usage to more than 90% and the same issue is there with Adobe apps like Photoshop and Illustrator, if you face this then using these apps in fullscreen makes them smoother and helps avoid the high gpu usage.
@@ -121,7 +131,6 @@ MacBookPro16,3
 
 ## Additional Notes
 
-Use one-key-hidpi to fix display scaling [https://github.com/xzhih/one-key-hidpi](https://github.com/xzhih/one-key-hidpi) <br>
 Don't forget to map your USB ports [https://github.com/corpnewt/USBMap](https://github.com/corpnewt/USBMap) <br>
 Don't forget to generate your own SMBIOS before installing macOS [https://github.com/corpnewt/GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) <br>
 [Workaround To fix Apple Music skipping tracks when using bluetooth audio.](https://www.reddit.com/r/hackintosh/comments/uip41i/workaround_apple_music_skipping_tracks_when_using/) <br>
