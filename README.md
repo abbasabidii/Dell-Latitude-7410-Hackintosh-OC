@@ -118,7 +118,7 @@ MacBookPro16,3
 - To get the HiDPI resolutions use [one-key-hidpi](https://github.com/xzhih/one-key-hidpi)
 - Select "Manual input resolution" option
 - You must enter the resolution that you want and it's 2x for example I have 1920x1080 display so I will take all the 4 resolutions supported by my display and add a 2x version of them as well and pass it in one-key-hidpi.
-- So in my case I used the following for my 1920x1080 display `3840x2160 1920x1080 3200x1800 1600x900 2732x1536 1366x768 2560x1440 1280x720`
+- So in my case I used the following for my 1920x1080 display <br> `3840x2160 1920x1080 3200x1800 1600x900 2732x1536 1366x768 2560x1440 1280x720`
 - Reboot and you will have HiDPI at 1600x900 resolution <br>
   <img width="1600" height="900" alt="Screenshot 2026-07-15 at 8 07 53 PM" src="https://github.com/user-attachments/assets/3a151301-2622-446d-a2d1-8c85f80b4c99" />
 
