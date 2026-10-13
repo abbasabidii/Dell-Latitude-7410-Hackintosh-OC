@@ -25,19 +25,26 @@ Sleep, audio, Wi-Fi, Bluetooth, iServices and Thunderbolt all working.
 
 ## What's working
 
-| Graphics & display | Audio | Connectivity |
-| :-- | :-- | :-- |
-| ✅ iGPU acceleration | ✅ Internal speakers | ✅ Wi-Fi 2.4 + 5 GHz |
-| ✅ HDMI + HDMI audio | ✅ Internal microphone | ✅ Bluetooth LE + AirPods audio |
-| ✅ USB-C DP Alt Mode | ✅ Headphone jack ([ComboJack](https://github.com/macos86/ComboJack)) | ✅ AirPlay, screen mirroring, Handoff |
-| ✅ Webcam | ✅ Airpods & Apple Music (Downloaded Songs) | ✅ iServices (iMessage, FaceTime, Phone) |
+| Graphics & display | Audio | 
+| :-- | :-- |
+| ✅ iGPU acceleration | ✅ Internal speakers |
+| ✅ HDMI + HDMI audio | ✅ Internal microphone |
+| ✅ USB-C DP Alt Mode | ✅ Headphone jack ([ComboJack](https://github.com/macos86/ComboJack)) |
+| ✅ Webcam | ✅ Airpods & Apple Music (Downloaded Songs) |
 
-| Power | Input | Ports |
-| :-- | :-- | :-- |
-| ✅ CPU SpeedStep | ✅ Touchpad, gestures + buttons | ✅ USB 3.0 |
-| ✅ Battery management | ✅ Fn hotkeys (volume `F2/F3`, brightness `F6/F7`) | ✅ USB-C charging + data |
-| ✅ Sleep / wake | ✅ Bluetooth Keyboard & Mouse | ✅ microSD reader |
-| ✅ Hibernation S4 | ✅ Continuity Camera (Via USB only) | ✅ Thunderbolt (plug in before boot) |
+| Connectivity | Power |
+| :-- | :-- |
+| ✅ Wi-Fi 2.4 + 5 GHz | ✅ CPU SpeedStep |
+| ✅ Bluetooth LE + AirPods audio | ✅ Battery management |
+| ✅ AirPlay, screen mirroring, Handoff | ✅ Sleep / wake | 
+| ✅ Hibernation S4 | ✅ iServices (iMessage, FaceTime, Phone) |
+
+| Input | Ports |
+| :-- | :-- |
+| ✅ Touchpad, gestures + buttons | ✅ USB 3.0 |
+| ✅ Fn hotkeys (volume `F2/F3`, brightness `F6/F7`) | ✅ USB-C charging + data |
+| ✅ Bluetooth Keyboard & Mouse | ✅ microSD reader |
+| ✅ Continuity Camera (Via USB only) | ✅ Thunderbolt (plug in before boot) |
 
 > [!NOTE]
 > Not working: nothing found so far. iPhone Mirroring is not supported.
