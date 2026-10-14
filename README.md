@@ -70,7 +70,7 @@ Sleep, audio, Wi-Fi, Bluetooth, iServices and Thunderbolt all working.
 | :-- | :-- | :-- | :-- |
 | Tahoe 26 | ✅ Compatible | Disabled | Needs OCLP patching for audio and Wi-Fi |
 | Sequoia 15 | ✅ Daily driver (15.8.1) | Disabled | Disabled due to installer boot and OCLP Wi-Fi patching issues |
-| Sonoma 14 | ✅ Compatible | See Releases | Disabled | Disabled due to installer boot and OCLP Wi-Fi patching issues | 
+| Sonoma 14 | ✅ Compatible | Disabled | See Releases | Disabled due to installer boot and OCLP Wi-Fi patching issues | 
 | Ventura 13 | ✅ Compatible | `j215` or `j223` | Best route for iServices setup |
 ---
 
