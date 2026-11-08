@@ -137,7 +137,13 @@ Do this after a successful Tahoe install.
 
 **Audio**
 
-- Install Laobamac's [SimpleHDA](https://github.com/laobamac/SimpleHDA/releases)
+- Go to Laobamac's [SimpleHDA](https://github.com/laobamac/SimpleHDA/releases)
+- Download and extract the RELEASE package from Releases, and place SimpleHDA.kext in EFI/OC/Kexts.
+- Add the driver in Kernel → Add, in the order of Lilu → AppleALC → SimpleHDA. An example of OpenCore-Kernel-Add.plist entries is included in the package.
+- Confirm that Kernel → Quirks → DisableLinkeditJettison is true, preserving the existing AppleALC, layout, and ACPI configurations for this machine.
+- Optional: Install SimpleHDA-HAL-1.0.1.pkg.
+
+Reboot.
 
 **Wi-Fi**
 
