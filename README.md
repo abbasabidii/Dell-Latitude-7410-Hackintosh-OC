@@ -16,7 +16,6 @@ Sleep, audio, Wi-Fi, Bluetooth, iServices and Thunderbolt all working.
 ![Stars](https://img.shields.io/github/stars/abbasabidii/Dell-Latitude-7410-Hackintosh-OC?style=for-the-badge&logo=github&color=1e2327)
 
 [**Download EFI**](https://github.com/abbasabidii/Dell-Latitude-7410-Hackintosh-OC/releases) ·
-[**Tahoe Wi-Fi & Audio Patching**](#-tahoe-audio--wi-fi-patching) ·
 [**HiDPI**](#-hidpi) 
 
 </div>
@@ -57,10 +56,6 @@ Sleep, audio, Wi-Fi, Bluetooth, iServices and Thunderbolt all working.
 2. Generate **your own SMBIOS** with [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) and map your ports with [USBMap](https://github.com/corpnewt/USBMap).
 3. Remove any `Device Properties` entries your laptop doesn't have.
 4. Apply the [BIOS settings](#-bios-settings) below, then install.
-5. On Sequoia and Tahoe, follow the [post-install patching](#-tahoe-audio--wi-fi-patching).
-
-> [!TIP]
-> Running into iMessage or FaceTime problems? Install **macOS Ventura 13.7.8** first and sign in with your Apple ID. Then build a Tahoe or Sequoia installer using the [Releases](https://github.com/abbasabidii/Dell-Latitude-7410-Hackintosh-OC/releases) and upgrade over Ventura. This is the route I used myself when iServices were not working in Tahoe.
 
 ---
 
@@ -68,10 +63,10 @@ Sleep, audio, Wi-Fi, Bluetooth, iServices and Thunderbolt all working.
 
 | macOS | Status | SecureBootModel | Notes |
 | :-- | :-- | :-- | :-- |
-| Tahoe 26 | ✅ Compatible | Disabled | Needs OCLP patching for audio and Wi-Fi |
-| Sequoia 15 | ✅ Daily driver (15.8.1) | Disabled | Disabled due to installer boot and OCLP Wi-Fi patching issues |
+| Tahoe 26 | ✅ Compatible | Default | Laobamac [Airportitlwm](https://github.com/laobamac/itlwm/releases) and [SimpleHDA](https://github.com/laobamac/SimpleHDA/releases) for Wifi and Audio |
+| Sequoia 15 | ✅ Daily driver (15.8.2) | `j215` or `j223` | Working iServices setup OOB |
 | Sonoma 14 | ✅ Compatible | Disabled | See Releases | Disabled due to installer boot and OCLP Wi-Fi patching issues | 
-| Ventura 13 | ✅ Compatible | `j215` or `j223` | Best route for iServices setup |
+| Ventura 13 | ✅ Compatible | `j215` or `j223` | Working iServices setup OOB |
 ---
 
 ## 💻 Specs
@@ -138,34 +133,15 @@ Do this after a successful Tahoe install.
 
 **Preparation**
 
-1. Install macOS Tahoe using the EFI from this repo.
-2. Disable **FileVault**.
-3. Disable automatic updates completely. Do **not** pick *Automatic Download Only*.
+- Install macOS Tahoe using the EFI from this repo.
 
 **Audio**
 
-1. Install and open [OCLP 3.0.0 Nightly, amfipassbeta Edition (Tahoe)](https://github.com/kgp-macPro/OCLP-lzhoang2801-amfipassbeta).
-2. Click **Start Root Patching**.
-3. Reboot. Audio now works.
+- Install Laobamac's [SimpleHDA](https://github.com/laobamac/SimpleHDA/releases)
 
 **Wi-Fi**
 
-1. Open `config.plist` in a plist editor and go to `DeviceProperties` → `Add`.
-2. Add a `#` in front of `PciRoot(0x0)/Pci(0x14,0x3)` where the model is **BCM4360 802.11ac Wireless Network Adapter**.
-3. Remove the `#` from `PciRoot(0x0)/Pci(0x14,0x3)` where the model is **Comet Lake PCH-LP CNVi WiFi**.
-4. Reboot and reset NVRAM. Wi-Fi now works.
-
-<details>
-<summary><b>Wi-Fi still not working?</b></summary>
-
-<br>
-
-Follow this [InsanelyMac guide](https://www.insanelymac.com/forum/topic/362042-experimental-fork-of-oclp-300-nightly-%E2%80%93-modern-wi-fi-awdl-and-applehda-fully-working-under-tahoe/).
-
-</details>
-
-> [!IMPORTANT]
-> When installing supplemental updates, uninstall the root patches first and re-apply them afterwards.
+- Install Laobamac's [Airportitlwm](https://github.com/laobamac/itlwm/releases)
 
 ---
 
